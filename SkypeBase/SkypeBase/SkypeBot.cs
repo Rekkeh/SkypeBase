@@ -13,7 +13,7 @@ namespace SkypeBase
 {
     class SkypeBot
     {
-        Skype skype;
+        internal Skype skype;
         /// <summary>
         /// TakeCalls - Whether or not to let calls come through.
         /// TakeFriends - Whether or not to allow people to add you.
@@ -31,6 +31,10 @@ namespace SkypeBase
         /// The Skype Protocol Version that you're currently using.
         /// </summary>
         int SkypeVersion = 7;
+        /// <summary>
+        /// The last message Id that was received by the bot
+        /// </summary>
+        int LastChatMessageId = 0;
 
         public SkypeBot()
         {
@@ -51,22 +55,25 @@ namespace SkypeBase
             /// </summary>
             skype.UserAuthorizationRequestReceived += new _ISkypeEvents_UserAuthorizationRequestReceivedEventHandler(SkypeFriendEvent);
             /// <summary>
-            /// Add our Skype MEssage Event Handler.
+            /// Add our Skype Message Event Handler.
             /// </summary>
             skype.MessageStatus += new _ISkypeEvents_MessageStatusEventHandler(SkypeMessageEvent);
         }
 
         /// <summary>
-        /// Get the skype call and if TakeCalls is false we return "I'm sorry, but your call has been declined." and decline the call automatically.
+        /// Event for if someone is trying to call the user
         /// </summary>
         /// <param name="call">The current call.</param>
         /// <param name="status">The status of the call.</param>
         void SkypeCallEvent(Call call, TCallStatus status)
         {
+            //Check to see if someone is trying to call
             if (status == TCallStatus.clsRinging)
             {
+                //Check if TakeCalls is false
                 if (!TakeCalls)
                 {
+                    //Send the person calling a message and try to end the call
                     skype.SendMessage(call.PartnerHandle.ToString(), "I'm sorry, but your call has been declined.");
                     try { call.Finish(); }
                     catch (Exception ex) { }
@@ -75,29 +82,44 @@ namespace SkypeBase
         }
 
         /// <summary>
-        /// Get who is trying to add us and if TakeFriends is true check if they are already on our friends list or if TakeFriends is false we do not accept the request
+        /// Event for when someone tries to add the user
         /// </summary>
         /// <param name="user">The user that is trying to add us.</param>
         void SkypeFriendEvent(User user)
         {
+            //Check to see if TakeFriends is true
             if (TakeFriends)
             {
+                //Get each friend from the user's friends list
                 foreach (User friend in skype.Friends)
                 {
+                    //Check if the person adding the user is already on the list
                     if (!(friend.Handle == user.Handle))
                     {
+                        //Grant access to add the user
                         user.IsAuthorized = true;
                     }
                 }
             }
         }
 
+        /// <summary>
+        /// Event for every message sent in a chat
+        /// </summary>
+        /// <param name="Message">The message that has been sent in the chat</param>
+        /// <param name="status">The status of the message</param>
         void SkypeMessageEvent(ChatMessage Message, TChatMessageStatus status)
         {
-            if (Message.Status == TChatMessageStatus.cmsSending || Message.Status == TChatMessageStatus.cmsReceived || Message.Status == TChatMessageStatus.cmsRead)
+            if (Message.Status == TChatMessageStatus.cmsSending || Message.Status == TChatMessageStatus.cmsReceived)
+            {
+                MainForm.Instance.WriteToHistory("[" + Message.FromDisplayName + "] " + Message.Body);
+            }
+            if (Message.Status == TChatMessageStatus.cmsSending || Message.Status == TChatMessageStatus.cmsReceived && LastChatMessageId < Message.Id || Message.Status == TChatMessageStatus.cmsRead && LastChatMessageId < Message.Id)
             {
                 string MessageSender = Message.Sender.Handle;
                 string MessageSenderDisplayName = Message.Sender.FullName;
+                //Looking for a better way to do this
+                LastChatMessageId = Message.Id;
 
                 if (Message.Body.IndexOf(CommandPrefix) == 0)
                 {
@@ -108,7 +130,14 @@ namespace SkypeBase
 
                         if (command.Equals("hello"))
                         {
-                            Message.Chat.SendMessage("Hello world!");
+                            if (args[0].Equals("world"))
+                            {
+                                Message.Chat.SendMessage("Hello World!");
+                            }
+                            else
+                            {
+                                Message.Chat.SendMessage("Hello!");
+                            }
                         }
                         else if (command.Equals("date"))
                         {
@@ -129,6 +158,5 @@ namespace SkypeBase
                 }
             }
         }
-
     }
 }

@@ -1,0 +1,11 @@
+C:\Users\Johnna\Documents\GitHub\SkypeBase\SkypeBase\SkypeBase\bin\Debug\SkypeBase.exe
+C:\Users\Johnna\Documents\GitHub\SkypeBase\SkypeBase\SkypeBase\bin\Debug\SkypeBase.pdb
+C:\Users\Johnna\Documents\GitHub\SkypeBase\SkypeBase\SkypeBase\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Johnna\Documents\GitHub\SkypeBase\SkypeBase\SkypeBase\obj\x86\Debug\Interop.SKYPE4COMLib.dll
+C:\Users\Johnna\Documents\GitHub\SkypeBase\SkypeBase\SkypeBase\obj\x86\Debug\SkypeBase.csproj.ResolveComReference.cache
+C:\Users\Johnna\Documents\GitHub\SkypeBase\SkypeBase\SkypeBase\obj\x86\Debug\SkypeBase.MainForm.resources
+C:\Users\Johnna\Documents\GitHub\SkypeBase\SkypeBase\SkypeBase\obj\x86\Debug\SkypeBase.Properties.Resources.resources
+C:\Users\Johnna\Documents\GitHub\SkypeBase\SkypeBase\SkypeBase\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Johnna\Documents\GitHub\SkypeBase\SkypeBase\SkypeBase\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Johnna\Documents\GitHub\SkypeBase\SkypeBase\SkypeBase\obj\x86\Debug\SkypeBase.exe
+C:\Users\Johnna\Documents\GitHub\SkypeBase\SkypeBase\SkypeBase\obj\x86\Debug\SkypeBase.pdb
