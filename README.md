@@ -3,11 +3,13 @@ SkypeBase
 
 An open source base for a C# SkypeBot.
 
+
 About
 -----------
 
-This base can be used for your own projects to get you a head start on your skype bot. It is 
-provided to you freely by [Lrn2Network](http://lrn2.net/).
+This Skype Bot Base can be used for your own projects to get you a head start on your skype bot. This 
+software is provided to you freely by [Lrn2Network](http://lrn2.net/).
+
 
 Pull Requests
 -----------
@@ -20,6 +22,7 @@ We do accept pull requests to our repository. Please keep in mind the following.
 * All pull requests should have meaningful edits.
 
 Please note that we reserve the right to deny any pull request that does not follow the above rules.
+
 
 License
 -----------
