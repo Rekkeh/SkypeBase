@@ -22,3 +22,10 @@ C:\Users\Johnna\Documents\GitHub\SkypeBase\SkypeBase\SkypeBase\obj\x86\Release\I
 C:\Users\Johnna\Documents\GitHub\SkypeBase\SkypeBase\SkypeBase\obj\x86\Release\SkypeBase.csproj.ResolveComReference.cache
 C:\Users\Johnna\Documents\GitHub\SkypeBase\SkypeBase\SkypeBase\obj\x86\Release\SkypeBase.exe
 C:\Users\Johnna\Documents\GitHub\SkypeBase\SkypeBase\SkypeBase\obj\x86\Release\SkypeBase.pdb
+C:\Users\Johnna\Documents\GitHub\SkypeBase\SkypeBase\SkypeBase\bin\Release\SkypeBase.exe
+C:\Users\Johnna\Documents\GitHub\SkypeBase\SkypeBase\SkypeBase\bin\Release\SkypeBase.pdb
+C:\Users\Johnna\Documents\GitHub\SkypeBase\SkypeBase\SkypeBase\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Johnna\Documents\GitHub\SkypeBase\SkypeBase\SkypeBase\obj\x86\Release\SkypeBase.MainForm.resources
+C:\Users\Johnna\Documents\GitHub\SkypeBase\SkypeBase\SkypeBase\obj\x86\Release\SkypeBase.Properties.Resources.resources
+C:\Users\Johnna\Documents\GitHub\SkypeBase\SkypeBase\SkypeBase\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\Johnna\Documents\GitHub\SkypeBase\SkypeBase\SkypeBase\obj\x86\Release\GenerateResource.write.1.tlog
