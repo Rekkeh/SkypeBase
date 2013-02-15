@@ -3,11 +3,14 @@ SkypeBot
 
 An open source base for a C# SkypeBot.
 
-## About ##
+About
+-----------
+
 This base can be used for your own projects to get you a head start on your skype bot. It is 
 provided to you freely by [Lrn2Network](http://lrn2.net/).
 
-## Pull Requests ##
+Pull Requests
+-----------
 
 We do accept pull requests to our repository. Please keep in mind the following.
 
@@ -16,7 +19,10 @@ We do accept pull requests to our repository. Please keep in mind the following.
 * All pull requests should be tested before hand.
 * All pull requests should have meaningful edits.
 
-## License ##
+Please note that we reserve the right to deny any pull request that does not follow the above rules.
+
+License
+-----------
 
  © Copyright 2013 by Lrn2Network. All rights reserved
 
