@@ -18,7 +18,7 @@ namespace SkypeBase
         /// TakeCalls - Whether or not to let calls come through.
         /// TakeFriends - Whether or not to allow people to add you.
         /// </summary>
-        Boolean TakeCalls, TakeFriends = true;
+        Boolean TakeCalls, TakeFriends = false;
         /// <summary>
         /// The character that the bot should use to recognize a command.
         /// </summary>
@@ -26,7 +26,7 @@ namespace SkypeBase
         /// <summary>
         /// What you want your bot to be called.
         /// </summary>
-        string BotName = "SkypeBase";
+        internal string BotName = "SkypeBase";
         /// <summary>
         /// The Skype Protocol Version that you're currently using.
         /// </summary>

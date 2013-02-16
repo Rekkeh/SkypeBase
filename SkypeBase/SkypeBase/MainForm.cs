@@ -60,7 +60,7 @@ namespace SkypeBase
         {
             if (ChatBox.Text == null || ChatBox.Text.Trim() == "") { return; }
             string ChatText = ChatBox.Text.Trim();
-            WriteToHistory("<Bot> " + ChatBox.Text);
+            WriteToHistory("<" + sb.BotName + "> " + ChatBox.Text);
             sb.skype.SendMessage(FriendsList.SelectedItem.ToString(), ChatBox.Text);
             ChatBox.Clear();
         }
