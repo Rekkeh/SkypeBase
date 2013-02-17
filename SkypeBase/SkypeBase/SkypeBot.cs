@@ -18,7 +18,8 @@ namespace SkypeBase
         /// TakeCalls - Whether or not to let calls come through.
         /// TakeFriends - Whether or not to allow people to add you.
         /// </summary>
-        Boolean TakeCalls, TakeFriends = false;
+        Boolean TakeCalls = false;
+        Boolean TakeFriends = false;
         /// <summary>
         /// The character that the bot should use to recognize a command.
         /// </summary>
