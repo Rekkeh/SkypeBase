@@ -144,6 +144,10 @@ namespace SkypeBase
                         {
                             Message.Chat.SendMessage("Today's date is " + DateTime.Now.ToLongDateString() + ".");
                         }
+                        else if (command.Equals("legorek"))
+                        {
+                            Message.Chat.SendMessage("What about him? Huh?");
+                        }
                         else if (command.Equals("time"))
                         {
                             Message.Chat.SendMessage("It is currently " + DateTime.Now.ToLongTimeString() + ".");
